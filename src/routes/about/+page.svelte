@@ -9,7 +9,7 @@
 </svelte:head>
 
 <main>
-	<div class="content">
+	<div class="content container">
 		<div class="header">
 			<a class="icon-button" href="/">
 				<IconHouse style="font-size: 1.3rem;" />
@@ -35,40 +35,45 @@
 
 <style lang="scss">
 	main {
-		flex: 1;
-		flex-direction: column;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		padding: 2rem;
+	}
 
-		@include flexCenter;
+	.container {
+		width: 100%;
+		max-width: 60rem;
+	}
+
+	.box {
+		background-color: var(--bg-2);
+		border-radius: 1rem;
+		padding: 2rem;
+		margin-bottom: 1rem;
 	}
 
 	.header {
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
-		gap: 1.5rem;
+		margin-bottom: 1rem;
 	}
 
-	.link {
-		text-decoration: none;
-		color: var(--fg-1);
-		padding: 1rem;
-		border-radius: 2rem;
-		background-color: var(--bg-2);
-		margin-left: auto;
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-
-		transition: background-color 0.2s ease-in-out;
-
-		&:hover {
-			background-color: var(--bg-3);
-		}
+	h1 {
+		margin: 0;
+		font-size: 1.5rem;
+		font-weight: 500;
 	}
 
-	.box {
-		padding: 1rem 1.5rem;
-		border-radius: 2rem;
-		background-color: var(--bg-2);
-		backdrop-filter: blur(6px);
+	p {
+		margin: 0;
+		margin-bottom: 1rem;
+		color: var(--fg-2);
+	}
+
+	p:last-child {
+		margin-bottom: 0;
 	}
 </style>
