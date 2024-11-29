@@ -218,18 +218,11 @@
 		justify-content: space-between;
 		align-items: start;
 		margin: 0.5rem 0 2rem 0;
-		flex-wrap: wrap;
-
-		.text {
-			flex: 1;
-			min-width: min(100%, 30rem);
-		}
 	}
 
 	.description {
 		font-size: 1.2rem;
 		margin: 1rem 0 0 0;
-		max-width: 100%;
 	}
 
 	.buttons {
