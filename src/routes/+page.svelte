@@ -72,15 +72,15 @@
 </script>
 
 <svelte:head>
-	<title>respir</title>
-	<meta name="description" content="breathing exercises to help you relax, focus, or sleep." />
+	<title>respirahh</title>
+	<meta name="description" content="ejercicios de respiración para ayudarte a relajarte, concentrarte o dormir." />
 </svelte:head>
 
 <main>
 	{#if showCycles}
 		<div class="form-popup" transition:fade={{ duration: 100 }}>
 			<form class="form-container" transition:fade={{ duration: 100 }}>
-				<label for="cycles">number of cycles</label>
+				<label for="cycles">número de ciclos</label>
 
 				<div class="formbuttons">
 					<input type="number" min="1" step="1" bind:value={currentCycles} />
@@ -106,73 +106,63 @@
 	<section>
 		<div class="head">
 			<div class="text">
-				<h1>respir <span class="text-icon"><IconAir /></span></h1>
-				<p class="description">breathing exercises to help you relax, focus, or sleep.</p>
+				<h1>respirahh <span class="text-icon"><IconAir /></span></h1>
+				<p class="description">ejercicios de respiración para ayudarte a relajarte, concentrarte o dormir.</p>
 			</div>
 
 			<div class="buttons">
-				<a href="settings" class="icon-button" title="settings">
+				<a href="settings" class="icon-button" title="configuración">
 					<IconGear style="font-size: 1.3rem;" />
 				</a>
-				<a href="about" class="icon-button" title="about">
+				<a href="about" class="icon-button" title="acerca de">
 					<IconInfo style="font-size: 1.3rem;" />
 				</a>
 			</div>
 		</div>
 
-		<!-- <h2>activity</h2>
-		<div class="graph">
-			{#each fakeActivity as { value, date }}
-				<div class="day">
-					<div class="bar" style="height: {(value / largest) * 100}%;"></div>
-					<div class="label">{formatDate(date)}</div>
-				</div>
-			{/each}
-		</div> -->
-
-		<h2>exercises</h2>
+		<h2>ejercicios</h2>
 		<div class="exercises">
 			{#each $presets as preset, i}
-				<a href="/{preset.id}" class="exercise" title="{preset.id} breathing">
+				<a href="/{preset.id}" class="exercise" title="respiración {preset.id}">
 					<div class="left">
 						<h3>{preset.name}</h3>
-						<p>{preset.cycles} cycles - {totalTime(preset)}</p>
+						<p>{preset.cycles} ciclos - {totalTime(preset)}</p>
 						<p>{preset.description}</p>
 					</div>
 					<button
 						class="icon-button"
-						title="edit exercise"
+						title="editar ejercicio"
 						on:click|preventDefault={() => openEditCycles(i, false)}
 					>
 						<IconSlider style="font-size: 1rem;" />
 					</button>
 				</a>
 			{/each}
-			<a href="/hold-test" class="exercise" title="breath holding test">
+			<a href="/hold-test" class="exercise" title="prueba de retención de respiración">
 				<div class="left">
-					<h3>breath holding test</h3>
-					<p>best time - {formatTime($bestHold)}</p>
-					<p>test your breath-holding capacity</p>
+					<h3>prueba de retención de respiración</h3>
+					<p>mejor tiempo - {formatTime($bestHold)}</p>
+					<p>prueba tu capacidad de retención de respiración</p>
 				</div>
 			</a>
 		</div>
 
-		<h2>custom exercises</h2>
+		<h2>ejercicios personalizados</h2>
 		<div class="exercises b">
 			{#each $customs as custom, i}
-				<a href="/custom/{i}" class="exercise" title="{custom.id} breathing">
+				<a href="/custom/{i}" class="exercise" title="respiración {custom.id}">
 					<div class="left">
 						<h3>{custom.name}</h3>
-						<p>{custom.cycles} cycles - {totalTime(custom)}</p>
+						<p>{custom.cycles} ciclos - {totalTime(custom)}</p>
 						<p>{custom.description}</p>
 					</div>
 					<div class="smallbuttons">
-						<a class="icon-button" title="edit custom exercise" href="/edit/{i}">
+						<a class="icon-button" title="editar ejercicio personalizado" href="/edit/{i}">
 							<IconSlider style="font-size: 1rem;" />
 						</a>
 						<button
 							class="icon-button"
-							title="delete custom exercise"
+							title="eliminar ejercicio personalizado"
 							on:click|preventDefault={() => deleteExercise(i)}
 						>
 							<IconTrash style="font-size: 1rem;" />
@@ -181,8 +171,8 @@
 				</a>
 			{/each}
 		</div>
-		<a href="/create" class="exercise create" id="create" title="create new custom exercise">
-			<IconPlus /><span>create or import custom exercise</span>
+		<a href="/create" class="exercise create" id="create" title="crear nuevo ejercicio personalizado">
+			<IconPlus /><span>crear o importar ejercicio personalizado</span>
 		</a>
 	</section>
 </main>

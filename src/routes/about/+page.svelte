@@ -4,8 +4,8 @@
 </script>
 
 <svelte:head>
-	<title>respir: about</title>
-	<meta name="description" content="information about the respir web app." />
+	<title>respirahh: acerca de</title>
+	<meta name="description" content="información sobre la aplicación web respirahh." />
 </svelte:head>
 
 <main>
@@ -14,20 +14,20 @@
 			<a class="icon-button" href="/">
 				<IconHouse style="font-size: 1.3rem;" />
 			</a>
-			<h1>about respir</h1>
+			<h1>acerca de respirahh</h1>
 			<a class="link" href="https://github.com/refact0r/respir">
-				github repository
+				repositorio github
 				<IconLink style="font-size: 1.3rem;" />
 			</a>
 		</div>
 		<div class="box">
 			<p>
-				respir is designed to help people relax and calm down from stress in their lives through
-				guided breathing exercises.
+				respirahh está diseñado para ayudar a las personas a relajarse y calmarse del estrés en sus vidas
+				a través de ejercicios de respiración guiados.
 			</p>
 			<p>
-				created by shibest, refact0r, and ben-6 for the 2024 Interlake Programming Club Winter
-				Hackathon.
+				creado por shibest, refact0r y ben-6 para el Hackathon de Invierno 2024 del Club de Programación
+				Interlake.
 			</p>
 		</div>
 	</div>

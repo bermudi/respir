@@ -4,19 +4,19 @@ export const bestHold = persisted('bestHold', 0);
 export const customs = persisted('customs', []);
 export const presets = persisted('presets', [
 	{
-		id: 'equal',
-		name: 'equal breathing',
-		description: 'helps you relax and focus',
+		id: 'igual',
+		name: 'respiración igual',
+		description: 'te ayuda a relajarte y concentrarte',
 		cycles: 10,
 		animation: 'circle',
 		routine: [
 			{
-				name: 'breathe in',
+				name: 'inhalar',
 				duration: 4,
 				type: 'in'
 			},
 			{
-				name: 'breathe out',
+				name: 'exhalar',
 				duration: 4,
 				type: 'out'
 			}
@@ -24,52 +24,52 @@ export const presets = persisted('presets', [
 	},
 	{
 		id: '4-7-8',
-		name: '4-7-8 breathing',
-		description: 'promotes relaxation and better sleep',
+		name: 'respiración 4-7-8',
+		description: 'promueve la relajación y un mejor sueño',
 		cycles: 10,
 		animation: 'circle',
 		routine: [
 			{
-				name: 'breathe in',
+				name: 'inhalar',
 				duration: 4,
 				type: 'in'
 			},
 			{
-				name: 'hold',
+				name: 'mantener',
 				duration: 7,
 				type: 'hold'
 			},
 			{
-				name: 'breathe out',
+				name: 'exhalar',
 				duration: 8,
 				type: 'out'
 			}
 		]
 	},
 	{
-		id: 'box',
-		name: 'box breathing',
-		description: 'relieves stress and improves mood',
+		id: 'caja',
+		name: 'respiración cuadrada',
+		description: 'mejora la concentración y reduce el estrés',
 		cycles: 10,
 		animation: 'box',
 		routine: [
 			{
-				name: 'breathe in',
+				name: 'inhalar',
 				duration: 4,
 				type: 'in'
 			},
 			{
-				name: 'hold',
+				name: 'mantener',
 				duration: 4,
 				type: 'hold'
 			},
 			{
-				name: 'breathe out',
+				name: 'exhalar',
 				duration: 4,
 				type: 'out'
 			},
 			{
-				name: 'hold',
+				name: 'mantener',
 				duration: 4,
 				type: 'hold'
 			}

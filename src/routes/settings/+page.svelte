@@ -5,8 +5,8 @@
 </script>
 
 <svelte:head>
-	<title>respir: settings</title>
-	<meta name="description" content="configure volume settings." />
+	<title>respirahh: configuración</title>
+	<meta name="description" content="configurar ajustes de volumen." />
 </svelte:head>
 
 <main>
@@ -15,10 +15,10 @@
 			<a class="icon-button" href="/">
 				<IconHouse style="font-size: 1.3rem;" />
 			</a>
-			<h1>settings</h1>
+			<h1>configuración</h1>
 			<button
 				class="icon-button"
-				title="reset to default"
+				title="restablecer valores predeterminados"
 				on:click|preventDefault={() => {
 					$preferences.darkMode = defaultPreferences.darkMode;
 					$preferences.ambienceVolume = defaultPreferences.ambienceVolume;
@@ -31,30 +31,30 @@
 		<div class="box">
 			<!-- dark mode toggle -->
 			<div class="row">
-				<label for="darkMode">dark mode</label>
-				<input type="checkbox" title="toggle dark mode" bind:checked={$preferences.darkMode} />
+				<label for="darkMode">modo oscuro</label>
+				<input type="checkbox" title="alternar modo oscuro" bind:checked={$preferences.darkMode} />
 			</div>
 			<div class="row">
-				<label for="ambienceVolume">ambience volume</label>
+				<label for="ambienceVolume">volumen del ambiente</label>
 				<input
 					class="slider"
 					type="range"
 					min="0"
 					max="1"
 					step="0.05"
-					title="change volume of ambient sounds"
+					title="cambiar volumen de los sonidos ambientales"
 					bind:value={$preferences.ambienceVolume}
 				/>
 			</div>
 			<div class="row">
-				<label for="speechVolume">speech volume</label>
+				<label for="speechVolume">volumen de voz</label>
 				<input
 					class="slider"
 					type="range"
 					min="0"
 					max="1"
 					step="0.05"
-					title="change volume of voice"
+					title="cambiar volumen de la voz"
 					bind:value={$preferences.speechVolume}
 				/>
 			</div>

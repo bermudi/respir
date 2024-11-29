@@ -16,9 +16,9 @@
 	let inWav, outWav, holdWav, forestWav;
 
 	onMount(() => {
-		inWav = new Audio('/audio/breathe-in.wav');
-		outWav = new Audio('/audio/breathe-out.wav');
-		holdWav = new Audio('/audio/hold.wav');
+		inWav = new Audio('/audio/inhalar.mp3');
+		outWav = new Audio('/audio/exhalar.mp3');
+		holdWav = new Audio('/audio/mantener.mp3');
 		forestWav = new Audio('/audio/forest.mp3');
 		inWav.volume = $preferences.speechVolume;
 		outWav.volume = $preferences.speechVolume;
