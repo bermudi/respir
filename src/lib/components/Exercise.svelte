@@ -346,21 +346,22 @@
 
 	.middle {
 		@include flexCenter;
-
 		flex: 1;
 		flex-direction: column;
-		gap: 2rem;
-		margin: 2rem;
+		gap: 1.5rem;
+		margin: 1rem;
+		justify-content: center;
 	}
 
 	.bottom {
 		display: flex;
 		align-items: center;
 		gap: 2rem;
+		margin-bottom: 1rem;
 	}
 
 	.visualizer {
-		margin-top: 1rem;
+		margin-top: 0.5rem;
 	}
 
 	.text {

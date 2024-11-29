@@ -218,11 +218,18 @@
 		justify-content: space-between;
 		align-items: start;
 		margin: 0.5rem 0 2rem 0;
+		flex-wrap: wrap;
+
+		.text {
+			flex: 1;
+			min-width: min(100%, 30rem);
+		}
 	}
 
 	.description {
 		font-size: 1.2rem;
 		margin: 1rem 0 0 0;
+		max-width: 100%;
 	}
 
 	.buttons {
@@ -244,10 +251,18 @@
 		}
 	}
 
+	section {
+		width: 100%;
+		max-width: 62rem;
+		padding: 0 1rem;
+		box-sizing: border-box;
+	}
+
 	.exercises {
 		display: grid;
-		grid-template-columns: 30rem 30rem;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
 		gap: 1rem;
+		width: 100%;
 	}
 
 	.exercise {
@@ -262,11 +277,14 @@
 		justify-content: space-between;
 		align-items: start;
 		transition: 0.2s;
+		width: 100%;
+		box-sizing: border-box;
 
 		h3 {
 			margin: 0;
 			font-size: 1.3rem;
 			font-weight: 600;
+			word-break: break-word;
 		}
 
 		p {
@@ -277,6 +295,7 @@
 		.icon-button {
 			padding: 0.7rem;
 			backdrop-filter: none;
+			flex-shrink: 0;
 		}
 
 		&.create {
@@ -285,14 +304,19 @@
 			justify-content: center;
 			align-items: center;
 			font-size: 1.2rem;
+			gap: 0.5rem;
+			text-align: center;
 
 			span {
-				margin-left: 0.5rem;
+				margin: 0;
 			}
 		}
 
 		.left {
 			margin-left: 0.3rem;
+			margin-right: 1rem;
+			flex: 1;
+			min-width: 0;
 		}
 
 		&:hover:not(:has(button:hover)) {
