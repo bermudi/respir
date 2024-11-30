@@ -194,6 +194,7 @@
 	.row {
 		display: flex;
 		gap: 1rem;
+		align-items: flex-end; // This will align the inputs at the bottom
 
 		&.buttons {
 			justify-content: flex-end;
@@ -202,9 +203,16 @@
 
 	.group {
 		width: 100%;
+		display: flex;
+		flex-direction: column; // Stack label and input vertically
 
 		&.cycles {
 			width: 30%;
+		}
+
+		label {
+			margin-bottom: 0.3rem;
+			// Remove display: inline-block since we're using flex
 		}
 	}
 
@@ -243,6 +251,8 @@
 		padding: 0.7rem 1.4rem;
 		border-radius: 2rem;
 		background-color: var(--bg-3);
+		height: 2.5rem; // Add fixed height for consistency
+		box-sizing: border-box; // Include padding in height calculation
 
 		&:focus {
 			background-color: var(--bg-2);
