@@ -15,20 +15,20 @@
 				<IconHouse style="font-size: 1.3rem;" />
 			</a>
 			<h1>acerca de respirahh</h1>
-			<!-- <a class="link" href="https://github.com/refact0r/respir">
+			<a class="link" href="https://github.com/bermudi/respir">
 				repositorio github
 				<IconLink style="font-size: 1.3rem;" />
-			</a> -->
+			</a>
 		</div>
 		<div class="box">
 			<p>
-				respirahh está diseñado para ayudar a las personas a relajarse y calmarse del estrés en sus vidas
+				respirahh está diseño para ayudar a las personas a relajarse y calmarse del estrés en sus vidas
 				a través de ejercicios de respiración guiados.
 			</p>
-			<!-- <p>
-				creado por shibest, refact0r y ben-6 para el Hackathon de Invierno 2024 del Club de Programación
-				Interlake.
-			</p> -->
+			<p>
+				espero puedas disfrutarlo y disfrutar de tus ejercicios de respiración. si tienes alguna sugerencia
+				o encuentras un error, no dudes en contactarme.
+			</p>
 		</div>
 	</div>
 </main>

@@ -22,7 +22,7 @@
 			animation: 'circle',
 			routine: [
 				{
-					name: 'breathe in',
+					name: 'inhalar',
 					duration: customBID,
 					type: 'in'
 				}
@@ -31,19 +31,19 @@
 
 		if (customBIHD && customBIHD > 0) {
 			custom.routine.push({
-				name: 'hold',
+				name: 'mantener',
 				duration: customBIHD,
 				type: 'hold'
 			});
 		}
 		custom.routine.push({
-			name: 'breathe out',
+			name: 'exhalar',
 			duration: customBOD,
 			type: 'out'
 		});
 		if (customBOHD && customBOHD > 0) {
 			custom.routine.push({
-				name: 'hold',
+				name: 'mantener',
 				duration: customBOHD,
 				type: 'hold'
 			});
@@ -82,8 +82,8 @@
 </script>
 
 <svelte:head>
-	<title>respir: create</title>
-	<meta name="description" content="create a custom breathing exercise." />
+	<title>respirahh: crear</title>
+	<meta name="description" content="crear un ejercicio de respiración personalizado." />
 </svelte:head>
 
 <main>
@@ -92,18 +92,18 @@
 			<a class="icon-button" href="/">
 				<IconHouse style="font-size: 1.3rem;" />
 			</a>
-			<h1>create custom exercise</h1>
+			<h1>crear ejercicio personalizado</h1>
 		</div>
 		<div class="box">
 			<form on:submit|preventDefault={() => importData()}>
 				<div class="row">
 					<div class="group">
-						<label for="import">import exercise data (optional)</label>
+						<label for="import">importar datos del ejercicio (opcional)</label>
 						<br />
 						<input id="import" type="text" minlength="1" bind:value={importValue} required />
 					</div>
 					<button type="submit">
-						<IconImport style="font-size: 1.2rem;" />import
+						<IconImport style="font-size: 1.2rem;" />importar
 					</button>
 				</div>
 			</form>
@@ -113,7 +113,7 @@
 			<div class="box">
 				<div class="row">
 					<div class="group">
-						<label for="name">name</label>
+						<label for="name">nombre</label>
 						<br />
 						<input
 							id="name"
@@ -125,44 +125,44 @@
 						/>
 					</div>
 					<div class="group cycles">
-						<label for="cycles">cycles</label>
+						<label for="cycles">ciclos</label>
 						<br />
 						<input id="cycles" type="number" min="1" step="1" required bind:value={customCycles} />
 					</div>
 				</div>
 				<div class="group">
-					<label for="description">description</label>
+					<label for="description">descripción</label>
 					<br />
 					<input id="description" type="text" maxlength="100" bind:value={customDesc} />
 				</div>
 				<div class="row">
 					<div class="group">
-						<label for="bid">breathe in duration </label>
+						<label for="bid">duración de inhalación </label>
 						<br />
 						<input id="bid" type="number" min="1" step="1" required bind:value={customBID} />
 					</div>
 					<div class="group">
-						<label for="bihd">breathe in hold duration </label>
+						<label for="bihd">duración de retención después de inhalar </label>
 						<br />
 						<input id="bihd" type="number" step="1" bind:value={customBIHD} />
 					</div>
 				</div>
 				<div class="row">
 					<div class="group">
-						<label for="bod">breathe out duration </label>
+						<label for="bod">duración de exhalación </label>
 						<br />
 						<input id="bod" type="number" min="1" step="1" required bind:value={customBOD} />
 					</div>
 					<div class="group">
-						<label for="bohd">breathe out hold duration </label>
+						<label for="bohd">duración de retención después de exhalar </label>
 						<br />
 						<input id="bohd" type="number" step="1" bind:value={customBOHD} />
 					</div>
 				</div>
-				<div class="row buttons">
-					<button class="" title="submit"><IconPlus style="font-size: 1.2rem;" /> create </button>
-				</div>
 			</div>
+			<button type="submit" class="create">
+				<IconPlus />crear ejercicio
+			</button>
 		</form>
 	</div>
 </main>

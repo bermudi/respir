@@ -3,8 +3,8 @@
 </script>
 
 <svelte:head>
-	<title>respir: breath hold test</title>
-	<meta name="description" content="test how long you can hold your breath." />
+	<title>respirahh: prueba de retención</title>
+	<meta name="description" content="prueba cuánto tiempo puedes mantener la respiración." />
 </svelte:head>
 
 <HoldTest />

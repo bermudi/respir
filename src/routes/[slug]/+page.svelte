@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>respir: {data.name}</title>
+	<title>respirahh: {data.name}</title>
 	<meta name="description" content={data.description} />
 </svelte:head>
 

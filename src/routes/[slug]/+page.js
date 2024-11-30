@@ -14,5 +14,5 @@ export async function load({ params }) {
 		return { exercise };
 	}
 
-	throw error(404, 'Exercise not found');
+	throw error(404, 'Ejercicio no encontrado');
 }

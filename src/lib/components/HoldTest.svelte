@@ -36,7 +36,7 @@
 	let timer;
 
 	let count = 0;
-	let text = 'click play to start';
+	let text = 'haz clic en play para comenzar';
 
 	let prevSec;
 	let prevMin = 0;
@@ -56,7 +56,7 @@
 			play = true;
 			cycle = -1;
 			count = 3;
-			text = 'breathe in';
+			text = 'inhala';
 			circleElem.style.transform = `rotate(0deg)`;
 			countElem.style.opacity = 1;
 			textElem.style.opacity = 1;
@@ -110,7 +110,7 @@
 				console.log(finalTime);
 				if (finalTime >= $bestHold) {
 					$bestHold = finalTime;
-					text = 'new best time!';
+					text = 'nuevo mejor tiempo!';
 				}
 			}
 			return;
@@ -131,7 +131,7 @@
 				if (count === 0) {
 					prevMin = prevSec;
 					cycle = 0;
-					text = 'hold';
+					text = 'mantén';
 					holdWav.play();
 				}
 			} else {
@@ -170,8 +170,8 @@
 </script>
 
 <svelte:head>
-	<title>respir: {exercise.name}</title>
-	<meta name="description" content="" />
+	<title>respirahh: prueba de retención</title>
+	<meta name="description" content="prueba tu capacidad de retención de respiración" />
 </svelte:head>
 
 <head></head>
@@ -179,9 +179,9 @@
 <main>
 	<div class="top">
 		<div class="bestTime">
-			best time - {formatTime($bestHold)}
+			mejor tiempo - {formatTime($bestHold)}
 		</div>
-		<button class="small-button" on:click={clearBest}>
+		<button class="small-button" on:click={clearBest} title="reiniciar mejor tiempo">
 			<IconReset style="font-size: 1.3rem;" />
 		</button>
 	</div>
@@ -198,27 +198,27 @@
 			</div>
 		</div>
 		<div class="text" bind:this={textElem}>
-			{#if text === 'click play to start'}
-				click <span class="text-icon">
+			{#if text === 'haz clic en play para comenzar'}
+				haz clic en <span class="text-icon">
 					<IconPlay style="font-size: 1.4rem;" />
-				</span> to start
+				</span> para comenzar
 			{:else}
 				{text}
 			{/if}
 		</div>
 	</div>
 	<div class="bottom">
-		<a class="icon-button side" href="/">
+		<a class="icon-button side" href="/" title="inicio">
 			<IconHouse style="font-size: 1.3rem;" />
 		</a>
-		<button class="icon-button play" on:click={togglePlay}>
+		<button class="icon-button play" on:click={togglePlay} title="reproducir/pausar">
 			{#if play}
 				<IconPause style="font-size: 1.8rem;" />
 			{:else}
 				<IconPlay style="font-size: 1.8rem;" />
 			{/if}
 		</button>
-		<button class="icon-button reset">
+		<button class="icon-button reset" title="reiniciar">
 			<IconReset style="font-size: 1.3rem;" />
 		</button>
 	</div>
