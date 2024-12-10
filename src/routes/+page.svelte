@@ -214,15 +214,27 @@
 
 	.head {
 		display: flex;
-		gap: 3rem;
-		justify-content: space-between;
-		align-items: start;
+		flex-direction: column;
+		gap: 1rem;
+		align-items: flex-start;
 		margin: 0.5rem 0 2rem 0;
+
+		@media (min-width: 768px) {
+			flex-direction: row;
+			gap: 3rem;
+			justify-content: space-between;
+			align-items: start;
+		}
 	}
 
 	.description {
-		font-size: 1.2rem;
-		margin: 1rem 0 0 0;
+		font-size: 1.1rem;
+		margin: 0.5rem 0 0 0;
+
+		@media (min-width: 768px) {
+			font-size: 1.2rem;
+			margin: 1rem 0 0 0;
+		}
 	}
 
 	.buttons {
@@ -249,13 +261,21 @@
 		max-width: 62rem;
 		padding: 0 1rem;
 		box-sizing: border-box;
+
+		@media (min-width: 768px) {
+			padding: 0 2rem;
+		}
 	}
 
 	.exercises {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
+		grid-template-columns: 1fr;
 		gap: 1rem;
 		width: 100%;
+
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 
 	.exercise {
